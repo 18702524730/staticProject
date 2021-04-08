@@ -1,0 +1,27 @@
+body{background: #f8f8f8;}
+.evidenceTitle{min-width: 1200px;background:url('../images/market/titleBg.jpg') no-repeat 0 0;;height: 799px;background-size:100% auto;
+position: relative;}
+
+.marketMain{margin-top: -54px;position: relative;padding-bottom: 100px;}
+.marketMainContainer{width: 1200px;margin: 0 auto;padding: 59px 70px 61px;text-align: center;overflow: hidden;background: #fff;border-radius: 33px;position: relative;}
+.marketMainContainer>img{width: 100%;}
+.marketMainContainer>h2{font-size: 26px;line-height: 26px;color: #000;padding:0 0 58px 0;margin: 0;}
+.marketMainContainer>.des{font-size: 16px;line-height: 24px;color: #909090;margin: 0;padding: 0 0 59px;}
+.marketMainContainer .caasa{font-size: 18px;line-height: 18px;position: absolute;top: 485px;left: 805px;margin: 0;color: #fff;}
+.marketMainContainer .caasaDes{font-size: 14px;line-height: 20px;color: #fff;position: absolute;left: 723px;top:540px;text-align: left;}
+.marketMainContainer .detailH3{font-size: 18px;color: #fff;line-height: 18px;position: absolute;margin: 0;left: 144px;bottom: 450px;}
+.marketMainContainer .detailP{text-align: left;font-size: 16px;color: #fff;line-height: 24px;position: absolute;left: 144px;bottom: 201px;}
+.evidenceFooter{height: 184px;background: #fff;text-align: center;line-height: 32px;color: #141414;
+padding-top: 65px;min-width: 1200px;}
+.evidenceFooter p{margin: 0;}
+.numWrap{overflow: hidden;}
+.numWrap>div{float: left;width: 33.3%;}
+.numItem .num{width: 50px;height: 50px;border-radius: 100%;background:#B7A1FF; line-height: 50px;margin: 0 auto;margin-bottom: 29px;
+font-size: 24px;color: #fff;position: relative;}
+.numItem .num::after{position: absolute;content: '';top: 25px;left: 72px;width: 315px;height: 1px;background: #909090;}
+.numItem .num2::after{width: 320px;position: absolute;content: '';top: 25px;left: 75px;height: 1px;background: #909090;}
+.numItem .num3::after{width: 0;}
+.numItem h3{font-size: 20px;line-height: 20px;color: #484848;margin: 0;padding: 0;}
+.numItem p{font-size: 16px;line-height: 17px;color: #484848;padding-top: 20px;margin: 0;}
+.mainDes{font-size: 16px;color: #666;line-height: 25px;padding: 66px 0 66px;}
+

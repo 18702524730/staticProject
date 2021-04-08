@@ -1,0 +1,40 @@
+body{background: #f8f8f8;}
+/* 步骤条 */
+.proxyContainer{padding: 0 30px 40px;background: #fff;margin: 30px auto 10px;width: 1200px;}
+.proxyContainer h2{font-size: 20px;font-weight: 600;line-height: 80px;border-bottom: 1px solid #eee;}
+.stepWrap{padding: 50px 25px 0;overflow: hidden;text-align: center;}
+.stepItem{width: 218px;float: left;position: relative;}
+.stepItem img{display: none;}
+.stepItem::after{position: absolute;content: '';width: 84px;height: 1px; border-top: 1px solid #eee;top: 21px;left:-45px;}
+.firstSetp::after{border: none;}
+.stepItem .num{width: 42px;height: 42px;border-radius: 21px;border: 1px solid #eee;margin: 0 auto;line-height: 40px;font-size: 16px;
+color: #ccc;display: block;}
+.stepItem p{font-size: 16px;color: #ccc;padding-top: 32px;}
+.activeStep img{display: inline-block;width: 42px;height: 42px;}
+.activeStep .num{display: none;}
+.activeStep p{color: #333;}
+.activeStep::after{border-color: #333;}
+/* 基本信息 */
+.baseInfoContainer{width: 1200px;margin: 0 auto 10px;padding: 30px 30px 30px;background: #fff;}
+.baseInfoContainer > h3{font-size: 18px;font-weight: 600;padding:0 0 58px 26px;}
+.orderInfo{padding: 0 74px;color: #909090;font-size: 16px;overflow: hidden;}
+.orderInfo li{float: left;width: 213px;margin-right: 150px;margin-bottom: 50px;}
+.orderInfo li:nth-child(3n+3){margin-right: 0;}
+.orderInfo li div{float: left;width: 180px;}
+.orderInfo li div:first-child{width: 85px;}
+/* .orderInfo li b{overflow: left;display: block;} */
+.proTable{margin: 0 74px;width: 990px;color: #909090;font-size: 14px;text-align: center;line-height: 45px;background: #f8f8f8;}
+.proTable tr{border-bottom: 1px solid #eee;}
+.proTable th{font-size: 16px;color: #333;text-align: center;}
+.proTable td{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.proTable .link{width: 363px;}
+.proTable .type{width: 190px;}
+.proTable .price{width: 170px;}
+.proTable .remark{width: 266px;}
+.picWrap{padding: 51px 74px 0;color: #909090;overflow: hidden;}
+.picWrap>div{float: left;}
+.picWrap .left{width: 40px;}
+.picWrap .right{width: 940px;}
+.picWrap img{width: 229px;height: 162px;margin: 0 20px 20px 0;vertical-align: top;}
+.bottomContainer{margin: 0 auto 100px;width: 1200px;background: #fff;text-align: right;padding: 22px 30px;}
+.bottomContainer button{width: 126px;height: 44px;background: #F31B1B;line-height: 44px;color: #fff;}

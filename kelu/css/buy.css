@@ -1,0 +1,159 @@
+body{background: #f8f8f8;}
+.container{width: 1200px;margin: 0 auto;padding: 0;}
+.selfBuy{padding: 50px 0;}
+.selfBuy>h1{font-size: 22px;color: #333;font-weight: 600;text-align: center;}
+.selfBuyDes{text-align: center;font-size: 16px;color: #909090;text-align: center;padding: 25px 0 50px;}
+.proInfo{padding: 30px;background: #fff;overflow: hidden;margin-bottom: 10px;}
+.proInfo h2{font-size: 20px;color: #333;font-weight: 600;padding-bottom: 30px;border-bottom: 1px solid #eee;position: relative;}
+.proInfo h2 >b{position: absolute;font-size: 14px;color: #dd1d1d;right: 0;bottom: 20px;font-weight: 400;cursor: pointer;}
+.inputWrap h3{font-size: 18px;color: #333;margin: 28px 0 19px;font-weight: 600;}
+.inputWrap{float: left;}
+.inputWrapRight{margin-left: 299px;}
+.inputWrap h3 i{color: #DD1D1D;}
+.inputWrap p{font-size: 12px;color: #909090;padding: 20px 0 40px;}
+.inputWrap input{width: 420px;border: 1px solid #ccc;line-height: 44px;padding-left: 20px;height: 46px;}
+.httpInput{border: 1px solid #ccc;background:rgba(231,231,231,1);width: 420px;color: #909090;line-height: 46px;padding-left: 22px;}
+.httpInput input{border-top: none;border-bottom: none;border-right: none;width: 318px;display: inline-block;margin-left: 23px;}
+.remark{margin-bottom: 20px;}
+.remark h3, .uploadWrap h3{font-size: 18px;color: #333;margin: 28px 0 19px;font-weight: 600;}
+.remark textarea{width: 1140px;height: 110px;border: 1px solid #ccc;resize: none;}
+.uploadWrap{float: left;width: 590px;}
+.uploadWrap .upload{overflow: hidden;color: #909090;cursor: pointer;}
+.uploadWrap .upload>div{float: left;}
+.uploadWrap .upload .uploadL{width: 158px;height: 158px;border: 1px dashed #909090;margin-right: 40px;position: relative;}
+.uploadWrap .upload .uploadL input{display: inline-block;width: 158px;height: 158px;opacity: 0;}
+.uploadWrap .upload .uploadL::after{content: '';position: absolute;width: 1px;height: 58px;top: 50px;left: 79px;border-right: 1px dashed #909090;}
+.uploadWrap .upload .uploadL::before{content: '';position: absolute;height: 1px;width: 58px;top: 79px;left: 50px;border-top: 1px dashed #909090;}
+.uploadWrapR{width: 548px;position: relative;}
+.downloadDemo{position: absolute;top: 32px;left: 100px;font-size: 14px;color: #909090;}
+.uploadWrap .demo{font-size: 16px;line-height: 30px;height: 97px;}
+.uploadWrap .format{font-size: 14px;line-height: 28px;}
+.uploadFile{line-height: 34px;font-size: 14px;padding: 26px 0 0;}
+.uploadFile p{height: 36px;position: relative;}
+.uploadFile b{color: #dd1d1d;width: 338px;display: inline-block;padding-left: 25px;background: url('../images/buy/linkIcon.png') no-repeat 0 12px;
+overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.uploadFile a{font-size: 18px;padding: 0 20px;color: #333;position: absolute;top: 0;right: 180px;}
+.addressWrap{color: #333;padding-bottom: 56px;position: relative;transition: all 0.2s ease;}
+.addressWrap .iconfont{font-size: 18px;color: #DD1D1D;position: absolute;left: 50%;bottom: 40px;font-weight: 600;transition: all 0.2s ease;cursor: pointer;width: 100%;text-align: center;left: 0;}
+.addressWrap .iconfontUp{transform: rotateX(180deg);}
+#adressTplWrap{height: 126px;overflow: hidden;transition: all 0.5s ease;}
+#invoiceTplWrap{height: 180px;overflow: hidden;}
+.addressItem{position: relative;padding: 40px 20px 28px;cursor: pointer;}
+.nameWrap{margin-bottom: 23px;}
+.addressItem .nameWrap .addressName{font-size: 18px;font-weight: 600;}
+.addressItem .nameWrap .addressPhone{font-size: 14px;font-weight: 600;margin: 0 0 0 17px;}
+.addressItem .nameWrap .label{display: inline-block;width: 48px;line-height: 18px;border: 1px solid #f31b1b;padding: 0;font-size: 12px;color: #DD1D1D;font-weight: 400;border-radius: 0;margin-left: 25px;}
+.addressDetail{font-size: 14px;}
+.operateWrap{color: #dd1d1d;font-size: 14px;position: absolute;top: 50%;right: 20px;transform: translateY(-7px);}
+.operateWrap b{cursor: pointer;}
+.nameAndPhone{color: #333;padding: 11px 0 30px;}
+.nameAndPhone .name{font-size: 16px;}
+.nameAndPhone .phone{font-size: 14px;margin-left: 14px;}
+.startBtn{width: 244px;line-height: 56px;background:rgba(221,29,29,1);color: #fff;font-size: 16px;margin: 20px auto 0;;display: block;}
+
+/* 弹框 */
+.dialog-dropback {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dialog-dropback .diaContainer {
+  position: absolute;
+  /* width: 300px; */
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.dialog-dropback .head {
+  padding: 15px;
+  text-align: center;
+}
+
+.dialog-dropback .content {
+  padding: 0px 15px 15px;
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.8;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
+.dialog-dropback .footer {
+  border-top: 1px solid #eee;
+  overflow: hidden;
+}
+.dialog-dropback .footer button {
+  float: left;
+  height: 100%;;
+  width: 50%;
+  font-size: 15px;
+  color: #FF2222;
+}
+
+.dialog-dropback .footer .cancel {
+  border-right: 1px solid #eee;color: #ccc;
+}
+
+
+button.aspect {
+  width: 200px;
+  height: 60px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+}
+.writePhone{width: 494px;padding: 30px 0 0;text-align: center;}
+.writePhone h2{font-size: 18px;color: #333;line-height: 58px;font-weight: 600;}
+.writePhone p{font-size: 16px;color: #909090;padding-bottom: 39px;}
+.phoneInput{border: 1px solid #ccc;line-height: 41px;margin: 0 115px 43px;text-align: left;}
+.phoneInput input{border: none;text-align: center;width: 196px;}
+.phoneInput b{display: inline-block;width: 65px;border-right: 1px solid #ccc;text-align: center;}
+.writePhone .footer{line-height: 54px;height: 54px;}
+
+.addressInput, .voiceInput{width: 644px;}
+.addressInput h2, .voiceInput h2{font-size: 20px;font-weight: 600;margin: 0 20px;line-height: 60px;border-bottom: 1px solid #eee;}
+.addressInput .nameInput, .voiceInput .nameInput{line-height: 40px;margin-top: 29px;font-size: 16px;}
+.addressInput .nameInput input, .voiceInput .nameInput input{border: 1px solid #ccc;width: 275px;line-height: 42px;padding-left: 20px;background: #fff;}
+.addressInput .nameInput b, .voiceInput .nameInput b{width: 207px;padding-right: 24px;text-align: right;display: inline-block;}
+.addressInput .footer, .voiceInput .footer{line-height: 70px;height: 70px;}
+.addressInput .checkInput, .voiceInput .checkInput{font-size: 16px;font-weight: 600;color: #333;padding-left: 140px;padding-top: 40px;}
+.addressInput .checkInput label, .voiceInput .checkInput label{padding-right: 35px;}
+
+
+    /* 商品表格 */
+    .productTable{background: #f8f8f8;width: 100%;margin: 43px 0 0px;}
+    .productTable tr{padding: 8px 0;line-height: 56px;text-align: center;}
+    .productTable tr th{color: #333;font-size: 16px;text-align: center;font-weight: 600;}
+    .productTable tr td{border-top: 1px solid #eee;font-size: 16px;color: #909090;padding: 0 15px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+    .productTable tr td input{line-height: 39px;text-align: center;height: 39px;}
+    .productTable tr td input[disabled]{background: #f8f8f8;border: none;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+    .productTable tr .link{text-align: left;width: 338px;}
+    .productTable tr .link input{text-align: left;width: 308px;text-align: left;}
+    .productTable tr .type{width: 232px;}
+    .productTable tr .type input{width: 202px;}
+    .productTable tr .price{width: 140px;}
+    .productTable tr .note{width: 295px;}
+    .productTable tr .operate{color: #DD1D1D;}
+    .productTable tr .operate b{cursor: pointer;}
+    .tableDes{font-size: 14px;color: #909090;padding-bottom: 14px;padding-top: 21px;position: relative;}
+    .tableDes i{color: #dd1a1d;}
+    .tableDes b{position: absolute;display: inline-block;width: 42px;height: 42px;border-radius: 21px;background: #ff4c4c;top: 10px;right: 0;
+      text-align: center;font-size: 30px;line-height: 38px;color: #fff;cursor: pointer;
+    }
+    /* 订单金额 */
+    .proInfo{position: relative;}
+    .proInfo .proPrice>b:first-child{width: 138px;display: inline-block;}
+    .proInfo .proPrice{padding-top: 8px;font-size: 14px;}
+    .proInfo .servicePrice{font-size: 16px;font-weight: 600;padding-top: 29px;}
+    .proInfo .extraPrice{padding-bottom: 11px;}
+    .proInfo .arrow{font-size: 20px;color: #DD1D1D;position: absolute;left: 50%;bottom: 40px;transform: rotate(90deg)}

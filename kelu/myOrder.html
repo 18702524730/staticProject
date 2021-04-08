@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang='zh'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <meta name='renderer' content='webkit'>
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>我的订单 - 可鹿</title>
+  <link href='http://www.xsebe.com/favicon.png' rel='shortcut icon' type='image/png'>
+  <link href='./css/reset.css' rel='stylesheet' type='text/css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href='./css/main.css' rel='stylesheet' type='text/css'>
+	<link href='./css/my.css' rel='stylesheet' type='text/css'>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src='./assets/html5shiv/3.7.3/html5shiv.min.js' type='text/javascript'></script>
+    <script src='./assets/respond.js/1.4.2/respond.min.js' type='text/javascript'></script>
+  <![endif]-->
+  <script src='./assets/jquery/1.12.4/jquery.min.js' type='text/javascript'></script>
+  <script src='./assets/bootstrap/3.3.7/js/bootstrap.min.js' type='text/javascript'></script>
+  <script src='./js/common.js' type='text/javascript'></script>
+  <script src='./js/jquery.tmpl.min.js' type='text/javascript'></script>
+  <script src='./js/page.js' type='text/javascript'></script>
+  <script src='./js/my_order.js' type='text/javascript'></script>
+</head>
+<body class="my_order">
+  <header>
+    <div class="container">
+      <div class="headerLeft">客服电话：<b>400-8888-1111</b></div>
+      <ul class="headerRight">
+        <li class="login_enter"><a href="./login.html">登陆</a></li>
+        <li class="reg_enter"><span>|</span><a href="./register.html">注册</a><span>|</span></li>
+        <li class="logined" style="display: none;">
+          <a class="login_name" href="./accountManage.html">
+            <img src="./images/my/photo.png" alt="" width="43" height="43">
+            <span></span>
+          </a>
+          <a href="./myMessage.html">
+            <img src="./images/icon/msg.png" alt="">
+          </a>
+          <span>|</span>
+        </li>
+        <li><a href="">帮助中心</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="my_content">
+    <div class="my_content_in">
+      <div class="form_container">
+        <div class="left_box">
+        	<a class="m_account" href="./accountManage.html">账号管理</a>
+          <a class="m_my cur" href="./myOrder.html">我的订单</a>
+          <a class="m_message" href="./myMessage.html">我的消息</a>
+        </div>
+        <div class="right_box">
+        	<div class="title">我的订单</div>
+        	<div class="condition">
+						<span>
+              <label>订单类型：</label>
+              <select id="order_type">
+                <option value="0">全部</option>
+                <option value="1">自助</option>
+                <option value="2">委托</option>
+              </select>
+            </span>
+            <span class="right">
+              <label>订单状态：</label>
+              <select id="order_status">
+                <option value="0">全部</option>
+                <option value="1">待付款</option>
+                <option value="2">已付款</option>
+                <option value="3">购买中</option>
+                <option value="4">待公证</option>
+                <option value="5">待补材料</option>
+                <option value="6">服务终止</option>
+                <option value="7">已完成</option>
+              </select>
+            </span>
+        	</div>
+        	<table class="tb">
+        		<thead>
+							<tr>
+								<th width="120">订单编号</th>
+								<th>订单时间</th>
+								<th>订单类型</th>
+								<th>商品/店铺名称</th>
+                <th>服务费</th>
+                <th>订单状态</th>
+								<th width="120">操作</th>
+							</tr>
+        		</thead>
+        		<tbody id="table_body">
+              <!-- 
+        			<tr>
+        				<td>121542456</td>
+        				<td>2016-08-24</td>
+        				<td>委托</td>
+        				<td>风一样的袜子</td>
+                <td>500.00</td>
+                <td>待付款</td>
+        				<td class="action"><span class="view">查看</span>|<span class="del disabled">删除</span></td>
+        			</tr>
+        			<tr>
+                <td>121542456</td>
+                <td>2016-08-24</td>
+                <td>委托</td>
+                <td>风一样的袜子</td>
+                <td>500.00</td>
+                <td>待付款</td>
+                <td class="action"><span class="view">查看</span>|<span class="del">删除</span></td>
+              </tr>
+              <tr>
+                <td>121542456</td>
+                <td>2016-08-24</td>
+                <td>委托</td>
+                <td>风一样的袜子</td>
+                <td>500.00</td>
+                <td>待付款</td>
+                <td class="action"><span class="view">查看</span>|<span class="del disabled">删除</span></td>
+              </tr>
+              <tr>
+                <td>121542456</td>
+                <td>2016-08-24</td>
+                <td>委托</td>
+                <td>风一样的袜子</td>
+                <td>500.00</td>
+                <td>待付款</td>
+                <td class="action"><span class="view">查看</span>|<span class="del">删除</span></td>
+              </tr>
+        			<tr class="empty">
+								<td colspan="7">
+									<img src="./images/my/no_order.png">
+								</td>
+        			</tr>
+               -->
+        		</tbody>
+        	</table>
+        	<div class="pagenation right">
+        		<!-- 
+            <span class="total">共100条数据</span>
+            <span class="prev disabled"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></span>
+            <span class="cur">1</span><span>2</span><span>3</span><span>4</span><span class="ov">...</span><span>10</span>
+            <span class="next"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></span>
+            <select>
+              <option value="10">10条/页</option>
+              <option value="15">15条/页</option>
+              <option value="20">20条/页</option>
+              <option value="50">50条/页</option>
+            </select>
+            <span class="jump">跳至 <input type="text" name="">页</span>
+             -->
+        	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">浙公网安备 33010002000099号 | © 2009-2018 Aliyun.com 版权所有 ICP证：浙B2-20080101</div>
+  </footer>
+  <script id="table_tmpl" type="text/x-jquery-tmpl">
+    <tr>
+      <td>${order_number}</td>
+      <td>${order_time}</td>
+      <td>${$item.getOrderTypeText(order_type)}</td>
+      <td>${order_name}</td>
+      <td>${order_money}</td>
+      <td>${$item.getOrderStatusText(order_status)}</td>
+      {{if order_status==1}}
+      <td class="action" orderid="${order_id}" ordertype="${order_type}"><span class="view">查看</span>|<span class="del disabled">删除</span></td>
+      {{else}}
+      <td class="action" orderid="${order_id}" ordertype="${order_type}"><span class="view">查看</span></td>
+      {{/if}}
+    </tr>
+  </script>
+</body>
+</html>

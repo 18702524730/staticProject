@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang='zh'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <meta name='renderer' content='webkit'>
+  <meta name="keywords" content="预猫,信拾贝,怕侵权,原创保护,被侵权,电商反侵权,电商维权,知识产权严密保护">
+  <meta name="description" content="预猫是一个致力于原创知识产权严密保护、侵权监测和维权诉讼的互联网平台，服务于电商、设计、文创等行业权利人；怕被侵权，就上预猫，享受省心又严密的知识产权保护。">
+  <title>预猫 - 保！我省心</title>
+  <link href='http://www.xsebe.com/favicon.png' rel='shortcut icon' type='image/png'>
+  <link href="http://www.xsebe.com/assets/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href='./css/main.css' rel='stylesheet' type='text/css'>
+  <link href='./css/market.css' rel='stylesheet' type='text/css'>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src='http://www.xsebe.com/assets/html5shiv/3.7.3/html5shiv.min.js' type='text/javascript'></script>
+  <script src='http://www.xsebe.com/assets/respond.js/1.4.2/respond.min.js' type='text/javascript'></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="evidenceTitle">
+  <div class="header">
+    <div class="logoWrap">
+      <img src="./images/evidence/logo.png" alt="">
+    </div>
+    <div class="loginWrap">
+        <a href="./index.html">首页</a>
+        <a href="./evidence.html">证据王</a>
+        <a class="current" href="javascript:viod(0);">营销保</a>
+        <a class="btn" href="./login.html">登陆</a>
+        <a class="btn" href="./register.html">注册</a>
+        <a class="help" href="./help.html"><img src="./images/evidence/help.png" alt=""></a>
+      </div>
+  </div>
+</div>
+<div class="marketMain">
+  <div class="marketMainContainer">
+    <h2><img src="./images/market/textImg.png" /></h2>
+    <div class="des">
+        每个做原创的人，都担心产品被抄袭<br>
+一旦被抄袭，经济损失，品牌损失都很大<br>
+相比能维权成功，我知道，你更希望不被抄袭
+    </div>
+    <img src="./images/market/mainImg.jpg" alt="">
+    <h3 class="caasa">中国反侵权联盟标识</h3>
+    <p class="caasaDes">在商品的预览图上，打上中国反侵权联盟标识；<br>
+        让盗图，盗版者望而却步！</p>
+    <h3 class="detailH3">详情页加上原创认证声明图</h3>
+    <p class="detailP">在商品的详情页上，添加中国反侵权联盟认证声明图；<br>
+        让盗图，盗版者望而却步；<br>
+        让购买者明辨真假！</p>
+  </div>
+</div>
+<div class="evidenceFooter">
+  <p>杭州信拾贝网络科技有限公司为中国反侵权假冒创新战略联盟副理事长单位</p>
+  <p>浙ICP备18028232号-1</p>
+</div>
+</body>
+<script src='http://www.xsebe.com/assets/jquery/1.12.4/jquery.min.js' type='text/javascript'></script>
+<!-- <script src='http://www.xsebe.com/assets/jquery/plugins/jquery-goup/1.1.3/jquery.goup.min.js' type='text/javascript'></script> -->
+<script src='http://www.xsebe.com/assets/bootstrap/3.3.7/js/bootstrap.min.js' type='text/javascript'></script>
+<script src='http://www.xsebe.com/js/common.js' type='text/javascript'></script>
+<!-- <script src='http://www.xsebe.com/js/register.js' type='text/javascript'></script>
+<script src='http://www.xsebe.com/js/login.js' type='text/javascript'></script> -->
+<script type="text/javascript">
+
+window.onload = function () {
+  // init();
+}
+
+window.onresize = throttle(windResize, 200);
+
+function init () {
+  windResize();
+}
+
+function windResize () {
+  var winWid = document.documentElement.clientWidth;
+  console.log(winWid)
+  if (winWid > 1200) {
+    $('.evidenceTitle').height(winWid*799/1920);
+  } else {
+    $('.evidenceTitle').height(1200*799/1920);
+  }
+}
+function throttle (methods, delay) {
+  var timer,
+      start;
+  return function loop() {
+    var self = this,
+        now = new Date(),
+        arg = [].slice.call(arguments);
+    if (!start) {
+      start = now
+    }
+    if(timer){
+      clearTimeout(timer)
+    }
+    if (now-start >= delay) {
+      methods.apply(self, arg)
+      start = now
+    } else {
+      timer = setTimeout(function(){
+        loop.apply(self, arg)
+      }, delay)
+    }
+  }
+}
+
+</script>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang='zh'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <meta name='renderer' content='webkit'>
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>账号管理 - 可鹿</title>
+  <link href='http://www.xsebe.com/favicon.png' rel='shortcut icon' type='image/png'>
+  <link href='./css/reset.css' rel='stylesheet' type='text/css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href='./css/main.css' rel='stylesheet' type='text/css'>
+	<link href='./css/my.css' rel='stylesheet' type='text/css'>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src='./assets/html5shiv/3.7.3/html5shiv.min.js' type='text/javascript'></script>
+    <script src='./assets/respond.js/1.4.2/respond.min.js' type='text/javascript'></script>
+  <![endif]-->
+  <script src='./assets/jquery/1.12.4/jquery.min.js' type='text/javascript'></script>
+  <script src='./assets/bootstrap/3.3.7/js/bootstrap.min.js' type='text/javascript'></script>
+  <script src='./js/common.js' type='text/javascript'></script>
+  <script src='./js/accountManage.js' type='text/javascript'></script>
+</head>
+<body class="account_manage">
+  <header>
+    <div class="container">
+      <div class="headerLeft">客服电话：<b>400-8888-1111</b></div>
+      <ul class="headerRight">
+        <li class="login_enter"><a href="./login.html">登陆</a></li>
+        <li class="reg_enter"><span>|</span><a href="./register.html">注册</a><span>|</span></li>
+        <li class="logined" style="display: none;">
+          <a class="login_name" href="./accountManage.html">
+            <img src="./images/my/photo.png" alt="" width="43" height="43">
+            <span></span>
+          </a>，<a class="login_out" href="">退出</a>
+          <a href="./myMessage.html">
+            <img src="./images/icon/msg.png" alt="">
+          </a><span>|</span>
+        </li>
+        <li><a href="">帮助中心</a></li>
+      </ul>
+      <a href="./index.html" class="index"></a>
+    </div>
+  </header>
+  <div class="my_content">
+    <div class="my_content_in">
+      <div class="form_container">
+        <div class="left_box">
+        	<a class="m_account cur" href="./accountManage.html">账号管理</a>
+        	<a class="m_my" href="./myOrder.html">我的订单</a>
+        	<a class="m_message" href="./myMessage.html">我的消息</a>
+        </div>
+        <div class="right_box">
+          <div class="title_wrap">
+          	<div class="title cur" for="base_info">基本信息<i></i></div>
+            <div class="title" for="modify_pass">修改密码<i></i></div>
+          </div>
+          <!-- 个人 基本信息可输入 -->
+          <!-- <div class="base_info">
+            <div class="form_item" style="width: 100%">
+              <label>头像：</label><img src="./images/my/photo.png" class="photo_img">
+            </div>
+            <div class="form_item">
+              <label>用户名：</label><input type="text" name="" class="user_name" placeholder="请输入用户名">
+            </div>
+            <div class="form_item">
+              <label>真实姓名：</label><input type="text" name="" class="real_name" placeholder="请输入真实姓名">
+            </div>
+            <div class="form_item">
+              <label>证件号：</label><input type="text" name="" class="no" placeholder="请输入证件号">
+            </div>
+            <div class="form_item">
+              <label>联系电话：</label><input type="text" name="" class="mobile" placeholder="请输入联系电话">
+            </div>
+            <div class="form_item">
+              <label style="width: 200px">证件照（正面）：</label>
+              <label class="upload_wrap" for="upload_ipt"><input type="file" id="upload_ipt" name=""></label>
+              <label for="" class="img_wrap"><img src="./images/my/photo.png"></label>
+            </div>
+            <div class="form_item">
+              <label style="width: 200px">证件照（反面）：</label>
+              <label class="upload_wrap" for="upload_ipt"><input type="file" id="upload_ipt" name=""></label>
+            </div>
+            <div class="save_btn">保存</div>
+          </div> -->
+          <!-- 企业 基本信息可输入 -->
+          <!-- <div class="base_info">
+            <div class="form_item" style="width: 100%">
+              <label>头像：</label><img src="./images/my/photo.png">
+            </div>
+            <div class="form_item">
+              <label>机构名称：</label><input type="text" name="" placeholder="请输入机构名称">
+            </div>
+            <div class="form_item">
+              <label>证件类型：</label><input type="text" name="" placeholder="请输入证件类型">
+            </div>
+            <div class="form_item">
+              <label>机构联系人：</label><input type="text" name="" placeholder="请输入机构联系人">
+            </div>
+            <div class="form_item">
+              <label>电子邮箱：</label><input type="text" name="" placeholder="请输入电子邮箱">
+            </div>
+            <div class="form_item">
+              <label style="width: 200px">营业执照：</label>
+              <label class="upload_wrap" for="upload_ipt"><input type="file" id="upload_ipt" name=""></label>
+            </div>
+            <div class="save_btn">保存</div>
+          </div> -->
+          <!-- 个人 基本信息展示 -->
+          <div class="base_info person_info" style="display: none;">
+            <div class="form_item photo" style="width: 100%">
+              <label>头像：</label>
+              <label class="upload_photo_wrap" for="upload_photo"><input type="file" id="upload_photo" class="upload_photo" name=""><img src="./images/my/photo.png" width="110" height="110"></label>
+            </div>
+            <div class="form_item username">
+              <label>用户名：</label><span>sfsfsf</span>
+            </div>
+            <div class="form_item true_name">
+              <label>真实姓名：</label><span>sfsfsf</span>
+            </div>
+            <div class="form_item id_number">
+              <label>证件号：</label><span>sfsfsf</span>
+            </div>
+            <div class="form_item mobile">
+              <label>联系电话：</label><span>sfsfsf</span><i>修改</i>
+            </div>
+            <div class="form_item id_number_front">
+              <label style="width: 200px">证件照（正面）：</label>
+              <label for="" class="img_wrap"><img src="./images/my/photo.png" width="224" height="202"></label>
+            </div>
+            <div class="form_item id_number_verso">
+              <label style="width: 200px">证件照（反面）：</label>
+              <label for="" class="img_wrap"><img src="./images/my/photo.png" width="224" height="202"></label>
+            </div>
+            <div class="save_btn J_verify" style="display: none;">实名认证</div>
+          </div>
+          <!-- 企业 基本信息展示 -->
+          <div class="base_info company_info" style="display: none;">
+            <div class="form_item photo" style="width: 100%">
+              <label>头像：</label>
+              <label class="upload_photo_wrap" for="upload_photo"><input type="file" id="upload_photo" class="upload_photo" name=""><img src="./images/my/photo.png" width="110" height="110"></label>
+            </div>
+            <div class="form_item username">
+              <label>机构名称：</label><span>sfsfsf</span>
+            </div>
+            <div class="form_item">
+              <label>证件类型：</label>统一社会信用代码证
+            </div>
+            <div class="form_item id_number">
+              <label>证件号：</label><span>sfsfsf</span>
+            </div>
+            <div class="form_item contact_name">
+              <label>机构联系人：</label><span>sfsfsf</span>
+            </div>
+            <div class="form_item mobile">
+              <label>联系电话：</label><span>sfsfsf</span><i>修改</i>
+            </div>
+            <div class="save_btn J_verify" style="display: none;">实名认证</div>
+          </div>
+
+          <div class="modify_pass" style="display: none;">
+            <div class="change_type">
+              <span class="cur" for="type1" id="1">通过密码修改</span>
+              <span for="type2" id="2">通过手机号修改</span>
+            </div>
+            <div class="type1">
+              <div class="form_item">
+                <label>当前密码：</label><input type="text" name="" maxlength="20" class="this_password" placeholder="请输入当前密码">
+              </div>
+              <div class="form_item">
+                <label>新密码：</label><input type="text" name="" maxlength="20" class="new_password" placeholder="请输入新密码">
+              </div>
+              <div class="form_item">
+                <label>确认新密码：</label><input type="text" name="" maxlength="20" class="confirm_password" placeholder="请确认新密码">
+              </div>
+            </div>
+            <div class="type2" style="display: none;">
+              <div class="form_item">
+                <label>注册手机号：</label><input type="text" name="" maxlength="11" class="mobile" placeholder="请输入手机号"><span class="code">发送验证码</span>
+              </div>
+              <div class="form_item">
+                <label>验证码：</label><input type="text" name="" maxlength="4" class="verify_code" placeholder="请输入验证码">
+              </div>
+              <div class="form_item">
+                <label>新密码：</label><input type="text" name="" maxlength="20" class="new_password" placeholder="请输入新密码">
+              </div>
+              <div class="form_item">
+                <label>确认新密码：</label><input type="text" name="" maxlength="20" class="confirm_password" placeholder="请确认新密码">
+              </div>
+            </div>
+            <div class="save_btn J_modifyPwd">保存</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">浙公网安备 33010002000099号 | © 2009-2018 Aliyun.com 版权所有 ICP证：浙B2-20080101</div>
+  </footer>
+  <div class="dialog-dropback" id="company_verify">
+    <div class="diaContainer">
+      <!-- 实名认证弹框第一步 -->
+      <div class="verified fir">
+        <h2>实名认证</h2>
+        <div class="nameInput">
+          <b>机构名称：</b><input type="text" class="name" placeholder="请输入机构名称">
+        </div>
+        <div class="nameInput">
+          <b>证件类型：</b><span>统一社会信用代码证</span>
+        </div>
+        <div class="nameInput">
+          <b>证件号码：</b><input type="text" class="unified_social_credit_code" placeholder="请输入统一社会信用代码证">
+        </div>
+        <div class="nameInput">
+          <b>法人姓名：</b><input type="text" class="legal_person_name" placeholder="请输入法人姓名">
+        </div>
+        <div class="nameInput">
+          <b>营业执照：</b><label class="upload_wrap" for="business_license_file" style="width: 275px;height: 190px;margin-right: 0"><input type="file" id="business_license_file" class="business_license_file" name="" onchange="html5Preview(this)" accept="image/*"><img class="img" src="./images/my/photo.png" alt=""></label>
+        </div>
+        <div class="close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+        <div class="save_btn next">下一步</div>
+      </div>
+      <!-- 实名认证弹框第二步 -->
+      <div class="verified sec" style="display: none">
+        <h2>实名认证</h2>
+        <div class="nameInput">
+          <b>身份：</b><span class="tab contact_type cur" tp="1">法定代表人</span><span class="tab contact_type" tp="2">其它联系人</span>
+        </div>
+        <div class="nameInput">
+          <b>姓名：</b><input type="text" class="contact_name" placeholder="请输入姓名">
+        </div>
+        <div class="nameInput">
+          <b>身份证号：</b><input type="text" class="id_number" placeholder="请输入身份证号">
+        </div>
+        <div class="nameInput">
+          <b>证件照片：</b><label class="upload_wrap" for="id_number_front"><input type="file" id="id_number_front" class="id_number_front" name="" onchange="html5Preview(this)" accept="image/*"><img src="./images/my/photo.png" alt=""><p>人像页</p></label><label class="upload_wrap" for="id_number_verso"><input type="file" id="id_number_verso" class="id_number_verso" name="" onchange="html5Preview(this)" accept="image/*"><img src="./images/my/photo.png" alt=""><p>国徽页</p></label>
+        </div>
+        <div class="nameInput" style="margin-top: 19px;">
+          <b>手机号码：</b><span class="mobile"></span>
+        </div>
+        <div class="nameInput">
+          <b>验证码：</b><input type="text" name="" class="verify_code" placeholder="请输入验证码"><span class="code">发送验证码</span>
+        </div>
+        <div class="close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+        <div class="save_btn submit">提交</div>
+      </div>
+      <!-- 实名认证弹框第三步 -->
+      <div class="verified ver_success" style="display: none">
+        <h2>实名认证</h2>
+        <div class="close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+        <img src="./images/buy/success.png" alt="" width="90" height="90">
+        <h3>实名认证申请已提交</h3>
+        <p>2-3个工作日内我们将会通过短信通知您审核结果</p>
+      </div>
+    </div>
+  </div>
+  <div class="dialog-dropback" id="person_verify">
+    <div class="diaContainer">
+      <!-- 实名认证弹框第一步 -->
+      <div class="verified fir">
+        <h2>实名认证</h2>
+        <p>请认真填写认证信息，并确保上传的证件照片清晰可见，上传证件遮挡、模糊或传不相关的图片等都将对您进行交易操作造成不必要的影响，所有上传信息均会被公证处妥善保管，不会用于其他商业用途或传输给其他第三方。</p>
+        <div class="nameInput">
+          <b>姓名：</b><input type="text" class="name" placeholder="请输入姓名" maxlength="20">
+        </div>
+        <div class="nameInput">
+          <b>身份证号：</b><input type="text" class="id_number" placeholder="请输入身份证号" maxlength="18">
+        </div>
+        <div class="nameInput">
+          <b>证件照片：</b><label class="upload_wrap" for="id_number_front"><input type="file" id="id_number_front" class="id_number_front" name="id_number_front" onchange="html5Preview(this)" accept="image/*"><img src="./images/my/photo.png" alt=""><p>人像页</p></label><label class="upload_wrap" for="id_number_verso"><input type="file" id="id_number_verso" class="id_number_verso" name="id_number_verso" onchange="html5Preview(this)" accept="image/*"><img src="./images/my/photo.png" alt=""><p>国徽页</p></label>
+        </div>
+        <div class="nameInput">
+          <b>手机号：</b><span class="mobile"></span>
+        </div>
+        <div class="nameInput">
+          <b>验证码：</b><input type="text" name="" class="verify_code" maxlength="4" placeholder="请输入验证码"><span class="code">发送验证码</span>
+        </div>
+        <div class="close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+        <div class="save_btn submit">提交</div>
+      </div>
+      <!-- 实名认证 成功弹框 -->
+      <div class="verified ver_success" style="display: none">
+        <h2>实名认证</h2>
+        <div class="close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+        <img src="./images/buy/success.png" alt="" width="90" height="90">
+        <h3>实名认证申请已提交</h3>
+        <p>2-3个工作日内我们将会通过短信通知您审核结果</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog-dropback" id="modify_mobile">
+    <div class="diaContainer">
+      <!-- 修改手机号第一步 -->
+      <div class="verified fir">
+        <h2>修改手机号</h2>
+        <div class="nameInput">
+          <b>原手机号：</b><span class="mobile"></span>
+        </div>
+        <div class="nameInput">
+          <b>验证码：</b><input type="text" name="" class="verify_code" maxlength="4" placeholder="请输入验证码"><span class="code code_ori">发送验证码</span>
+        </div>
+        <div class="close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+        <div class="save_btn next">下一步</div>
+      </div>
+      <!-- 修改手机号第二步 -->
+      <div class="verified sec" style="display: none">
+        <h2>修改手机号</h2>
+        <div class="nameInput">
+          <b>新手机号：</b><input type="text" class="mobile_new" placeholder="请输入新手机号" maxlength="11">
+        </div>
+        <div class="nameInput">
+          <b>验证码：</b><input type="text" name="" class="verify_code verify_code_new" maxlength="4" placeholder="请输入验证码"><span class="code code_new">发送验证码</span>
+        </div>
+        <div class="close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+        <div class="save_btn submit">提交</div>
+      </div>
+      <!-- 修改手机号 成功弹框 -->
+      <div class="verified modify_success" style="display: none">
+        <h2>修改手机号</h2>
+        <div class="close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+        <img src="./images/buy/success.png" alt="" width="90" height="90">
+        <h3>修改成功</h3>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
